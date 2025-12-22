@@ -1,0 +1,36 @@
+#include <iostream>
+
+int main() {
+    int day;
+    std::cout << "لطفاً شماره روز هفته را وارد کنید (1-7): ";
+    std::cin >> day;
+
+    switch (day) {
+        case 1:
+            std::cout << "شنبه" << std::endl;
+            break;
+        case 2:
+            std::cout << "یکشنبه" << std::endl;
+            break;
+        case 3:
+            std::cout << "دوشنبه" << std::endl;
+            break;
+        case 4:
+            std::cout << "سه‌شنبه" << std::endl;
+            break;
+        case 5:
+            std::cout << "چهارشنبه" << std::endl;
+            break;
+        case 6:
+            std::cout << "پنجشنبه" << std::endl;
+            break;
+        case 7:
+            std::cout << "جمعه" << std::endl;
+            break;
+        default:
+            std::cout << "ورودی نامعتبر است!" << std::endl;
+            break;
+    }
+
+    return 0;
+}

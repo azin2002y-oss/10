@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+    int num1, num2;
+
+    std::cout << "لطفاً عدد اول را وارد کنید: ";
+    std::cin >> num1;
+    std::cout << "لطفاً عدد دوم را وارد کنید: ";
+    std::cin >> num2;
+
+    
+    int sum = num1 + num2;          
+    int difference = num1 - num2;   
+    int product = num1 * num2;     
+    int quotient = num1 / num2;  
+    int remainder = num1 % num2;   
+
+    std::cout << "مجموع: " << sum << std::endl;
+    std::cout << "تفاضل: " << difference << std::endl;
+    std::cout << "حاصل ضرب: " << product << std::endl;
+    std::cout << "خارج قسمت: " << quotient << std::endl;
+    std::cout << "باقیمانده: " << remainder << std::endl;
+
+    return 0;
+}

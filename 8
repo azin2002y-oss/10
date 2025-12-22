@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main() {
+  
+    char vowelsUpper[] = {'A', 'E', 'I', 'O', 'U'};
+  
+    char vowelsLower[] = {'a', 'e', 'i', 'o', 'u'};
+
+    std::cout << "ASCII:\n";
+    for (char c : vowelsUpper) {
+        std::cout << c << ": " << static_cast<int>(c) << std::endl;
+    }
+
+    std::cout << "\nکد ASCII:\n";
+    for (char c : vowelsLower) {
+        std::cout << c << ": " << static_cast<int>(c) << std::endl;
+    }
+
+    return 0;
+}

@@ -1,0 +1,13 @@
+#include <iostream>
+#include <limits> 
+
+int main() {
+    short n = std::numeric_limits<short>::max();
+    std::cout << " n: " << n << std::endl;
+
+    n += 1;
+
+    std::cout << "n: " << n << std::endl;
+
+    return 0;
+}

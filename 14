@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cmath> // برای استفاده از تابع sqrt
+
+int main() {
+    double a, b, c;
+
+    // دریافت ضرایب از کاربر
+    std::cout << "لطفاً ضرایب a، b و c را وارد کنید (ax^2 + bx + c = 0):" << std::endl;
+    std::cout << "a: ";
+    std::cin >> a;
+    std::cout << "b: ";
+    std::cin >> b;
+    std::cout << "c: ";
+    std::cin >> c;
+
+    // بررسی اینکه a صفر نباشد
+    if (a == 0) {
+        std::cout << "ضریب a باید غیر صفر باشد." << std::endl;
+        return 1; // خروج از برنامه
+    }
+
+    // محاسبه دلتای معادله
+    double discriminant = b * b - 4 * a * c;
+
+    // بررسی اینکه آیا دلتای منفی است یا نه
+    if (discriminant > 0) {
+        // دو ریشه واقعی و مختلف
+        double x1 = (-b + sqrt(discriminant)) / (2 * a);
+        double x2 = (-b - sqrt(discriminant)) / (2 * a);
+        std::cout << "ریشه‌ها: x1 = " << x1 << ", x2 = " << x2 << std::endl;
+    } else if (discriminant == 0) {
+        // یک ریشه مضاعف
+        double x = -b / (2 * a);
+        std::cout << "ریشه مضاعف: x = " << x << std::endl;
+    } else {
+        // ریشه‌های تخیلی
+        std::cout << "ریشه‌ها تخیلی هستند." << std::endl;
+    }
+
+    return 0;
+}

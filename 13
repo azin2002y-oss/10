@@ -1,0 +1,41 @@
+#include <iostream>
+
+int main() {
+    int num1, num2;
+    char operation;
+
+    // دریافت ورودی از کاربر
+    std::cout << "لطفاً دو عدد صحیح و یک عملگر (+، -، *، /) وارد کنید:" << std::endl;
+    std::cout << "عدد اول: ";
+    std::cin >> num1;
+    std::cout << "عدد دوم: ";
+    std::cin >> num2;
+    std::cout << "عملگر (+، -، *، /): ";
+    std::cin >> operation;
+
+    // انجام عملیات بر اساس عملگر ورودی
+    switch (operation) {
+        case '+':
+            std::cout << "نتیجه: " << num1 + num2 << std::endl;
+            break;
+        case '-':
+            std::cout << "نتیجه: " << num1 - num2 << std::endl;
+            break;
+        case '*':
+            std::cout << "نتیجه: " << num1 * num2 << std::endl;
+            break;
+        case '/':
+            // بررسی تقسیم بر صفر
+            if (num2 != 0) {
+                std::cout << "نتیجه: " << static_cast<double>(num1) / num2 << std::endl;
+            } else {
+                std::cout << "خطا: تقسیم بر صفر!" << std::endl;
+            }
+            break;
+        default:
+            std::cout << "عملگر نامعتبر است!" << std::endl;
+            break;
+    }
+
+    return 0;
+}

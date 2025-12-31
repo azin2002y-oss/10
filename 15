@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main() {
+    // حروف صدادار بزرگ
+    char vowelsUpper[] = {'A', 'E', 'I', 'O', 'U'};
+    // حروف صدادار کوچک
+    char vowelsLower[] = {'a', 'e', 'i', 'o', 'u'};
+
+    std::cout << "کد ASCII حروف صدادار بزرگ:\n";
+    for (char c : vowelsUpper) {
+        std::cout << c << ": " << static_cast<int>(c) << std::endl;
+    }
+
+    std::cout << "\nکد ASCII حروف صدادار کوچک:\n";
+    for (char c : vowelsLower) {
+        std::cout << c << ": " << static_cast<int>(c) << std::endl;
+    }
+
+    return 0;
+}
